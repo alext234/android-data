@@ -17,8 +17,8 @@ def main():
 
     poller = SensorPoller(ip_port='192.168.20.141:8888')
     while True:
-        gravities = poller.get_next()
-        print(len(gravities), gravities[0])
+        data = poller.get_next()
+        print(len(data['timestamp']), data['gravity'][0])
         time.sleep(0.2)
 
 
