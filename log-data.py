@@ -34,7 +34,7 @@ def main():
     df = pd.DataFrame(l[0])
     for ldf in l[1:]:
         df = df.append(pd.DataFrame(ldf))
-    df.to_csv(options.output, Index=False)
+    df.to_csv(options.output, index=False)
 
 if __name__=='__main__':
     main()
